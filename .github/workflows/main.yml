@@ -29,6 +29,7 @@ jobs:
 
       - name: Check and test
         run: |
+          cd pebble-game
           cargo fmt --all --check
           cargo clippy --release --all-targets -- -D warnings -A unused-imports
           cargo t -r
